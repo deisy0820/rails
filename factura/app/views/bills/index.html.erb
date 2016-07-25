@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1 align="center">Bills </h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Id factura</th>
+      <th>Nombre completo</th>
+      <th>Direccion</th>
+      <th>Ciudad</th>
+      <th>Cantidad</th>
+      <th>Detalle factura</th>
+      <th>Cod venta</th>
+      <th>Vendedor</th>
+      <th>Precio unitario</th>
+      <th>Precio total</th>
+      <th>descuento</th>
+      <th>iva</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bills.each do |bill| %>
+      <tr>
+        <td><%= bill.id_factura %></td>
+        <td><%= bill.nombre_completo %></td>
+        <td><%= bill.direccion %></td>
+        <td><%= bill.ciudad %></td>
+        <td><%= bill.cantidad %></td>
+        <td><%= bill.detalle_factura %></td>
+        <td><%= bill.cod_venta %></td>
+        <td><%= bill.vendedor %></td>
+        <td><%= bill.precio_unitario %></td>
+        <td><%= bill.precio_total %></td>
+        <td><%= bill.descuento %></td>
+        <td><%= bill.iva %></td>
+        <td class="btn btn-info"><%= link_to 'Show', bill %></td>
+        <td class="btn btn-info" ><%= link_to 'Edit', edit_bill_path(bill) %></td>
+        <td class="btn btn-danger"><%= link_to 'Destroy', bill, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<button type="submit" class="btn btn-primary"><%= link_to 'New Bill', new_bill_path %> </button> 
+
+<br>
+
+

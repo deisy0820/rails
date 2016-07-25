@@ -1,0 +1,72 @@
+
+<%= form_for(bill) do |f| %>
+  <% if bill.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bill.errors.count, "error") %> prohibited this bill from being saved:</h2>
+
+      <ul>
+      <% bill.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="form-group">
+    <%= f.label :id_factura %>
+    <%= f.text_field :id_factura, class: "form-control" %>
+  </div>
+
+ <div class="form-group">
+    <%= f.label :nombre_completo %>
+    <%= f.text_field :nombre_completo, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :direccion %>
+    <%= f.text_field :direccion, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :ciudad %>
+    <%= f.text_field :ciudad, class: "form-control" %>
+  </div>
+ <div class="form-group">
+    <%= f.label :cantidad %>
+    <%= f.number_field :cantidad %>
+  </div>
+
+ <div class="form-group">
+    <%= f.label :detalle_factura %>
+    <%= f.text_field :detalle_factura, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :cod_venta %>
+    <%= f.text_field :cod_venta, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :vendedor %>
+    <%= f.text_field :vendedor, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :precio_unitario %>
+    <%= f.text_field :precio_unitario, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :descuento %>
+    <%= f.text_field :descuento, class: "form-control" %>
+  </div>
+
+  <!--<div class="form-group">
+    <%= f.label :precio_total %>
+    <%= f.text_field :precio_total, class: "form-control"%>
+  </div> -->
+  <div class="form-group">
+    <%= f.submit class: "btn btn-default" %>
+  </div>
+<% end %>
+

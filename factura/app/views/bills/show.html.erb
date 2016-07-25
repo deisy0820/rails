@@ -1,0 +1,67 @@
+<p id="notice"><%= notice %></p>
+
+<table>
+
+<p>
+  <strong>Id factura:</strong>
+  <%= @bill.id_factura %>
+</p>
+
+<p>
+  <strong>Nombre completo:</strong>
+  <%= @bill.nombre_completo %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @bill.direccion %>
+</p>
+
+<p>
+  <strong>Ciudad:</strong>
+  <%= @bill.ciudad %>
+</p>
+
+<p>
+  <strong>Cantidad:</strong>
+  <%= @bill.cantidad %>
+</p>
+
+<p>
+  <strong>Detalle factura:</strong>
+  <%= @bill.detalle_factura %>
+</p>
+
+<p>
+  <strong>Cod venta:</strong>
+  <%= @bill.cod_venta %>
+</p>
+
+<p>
+  <strong>Vendedor:</strong>
+  <%= @bill.vendedor %>
+</p>
+
+<p>
+  <strong>Precio unitario:</strong>
+  <%= @bill.precio_unitario %>
+</p>
+
+<p>
+  <strong>Precio total:</strong>
+  <%= @bill.precio_total %>
+</p>
+
+<p>
+  <strong>descuento:</strong>
+  <%= @bill.descuento %>
+</p>
+
+<p>
+  <strong>iva:</strong>
+  <%= @bill.iva %>
+</p>
+
+<button type="submit" class="btn btn-primary"><%= link_to 'Edit', @bill %>  </button> |
+<button type="submit" class="btn btn-primary"><%= link_to 'Back', bills_path %> </button>
+
